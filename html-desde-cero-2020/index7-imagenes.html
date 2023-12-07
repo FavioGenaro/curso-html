@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Formatos de imágenes 
+        Vectores: .svg - unico formato aceptado por el navegador, para logos, son codigo formulas matemaricas que el navegador interpreta
+        Mapa de bits: .jpg .jpeg - buenos para fotos y menos pesados
+                      .png - para fotos o imagenes detalladas con transparencia
+                      .gif - para animaciones 
+                      .webp - formato más liviano que jpg y soporta transparencia
+
+    -->
+    <!-- alt: es una descripcion de la imagen para personas que no ven -->
+    <!-- solo colocar width o height por que el navegador calcula el otro valor -->
+    <h2>Imagen svg</h2>
+    <img src="img/porfolio.svg" alt="Hombre señalando a una pizarra" width="300" height="200">
+    <h2>Imagen jpg</h2>
+    <img src="img/mail.jpg" alt="Mujer programando" width="300" height="300">
+    <h2>Imagen de un link</h2>
+    <!-- lo preferible es que la imagen sea de fuentes confiables para no tener problemas si la pagina cae -->
+    <img src="https://www.tonica.la/__export/1584386415469/sites/debate/img/2020/03/16/goku_saludando_portada_1.jpg_1902800913.jpg" alt="Goku saludando" width="300">
+
+    
+    
+    <!-- devicePixelRatio
+        Pixeles de viewport (PV) - Pixeles disponibles para mostrar contenido
+
+        Pixeles reales (PR) - Pixeles fisicos implementados por le fabricante en la pantalla
+
+        devicePixelRatio = PR / PV
+    
+    -->
+    <!-- SOlO FUNCIONA EN FIREFOX NO EN CHORME -->
+    <h2>SRCSET</h2>
+    
+    <img src="law.png" srcset="img/mail.jpg 2x, img/porfolio.svg 4x">
+
+    <!-- PICTURE -->
+    <!-- SOlO FUNCIONA EN FIREFOX NO EN CHORME -->
+    <picture>
+        <!-- contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. -->
+        <!-- type: cambia el tipo de imagen -->
+        <source srcset="https://www.gstatic.com/webp/gallery/4.sm.webp" type="image/webp">
+        <!-- si colocamos image/jpg, lo trataria como jpg en caso el nagador no maneje una webp -->
+        <source srcset="https://www.gstatic.com/webp/gallery/4.sm.webp" type="image/jpg">
+
+        <!-- media, es un condicional para las source, encaso no se cumplen muestra la img -->
+        <source srcset="img/mail.jpg" media="(min-width: 800px)"> <!-- iniciar con el tamaño más grande-->
+        <source srcset="img/mail.jpg" media="(min-width: 400px)">
+        <img src="img/porfolio.svg " alt="">
+    </picture>
+
+    <!-- FIGURE -->
+    <figure>
+        <!-- corta parte del contenido principal para mostrar otro contenido relacionado, no es para imagenes pero puede usarse-->
+        <!-- Podemos tambien meter un video -->
+        <img src="img/mail.jpg" alt="" width="400">
+        <figcaption>
+            <!-- Permite explicar una leyenda de ese contenido -->
+            <p>Foto de una mujer con una computadora</p>
+        </figcaption> 
+    </figure>
+
+    <!-- AUDIO Y VIDEO 
+        controls: aparace un boton de play y demás para reproduccion
+        poster: coloco una miniatura al video
+        autoplay: al cargar la pagina se reproduce automaticamente - aunque los navegadores lo bloquean por molestias al usuario
+        muted: silencia al video, pero con autoplay hace una reproduccion en silencio-->
+    <!-- Tambien puedo incluir paginas externas como youtube, se recomienda usarlo ya que si es propio consumiria mucho ancho de banda -->
+    <!-- Para un video propio usar formato mp4 y codec h264 -->
+    <video 
+        src="video/5.6 - Figure.mp4" 
+        width="500"
+        controls
+        poster="img/porfolio.svg"
+        autoplay
+        muted
+        >
+    </video>
+    <audio 
+        src="audio/audio.mp3"
+        controls
+    ></audio>
+
+    <!-- Insertar contenido externo -->
+    <!-- permite aprovechar otros servicios externos, como el de youtube, twich, facebook, podemos hacer que con html sea más iterativa la pagina-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rn_YodiJO6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- de Wufoo -->
+    <h2>Formulario de contacto</h2>
+    <iframe height="440" title="Embedded Wufoo Form" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://faviosaico.wufoo.com/embed/z2htx5i1l3v583/"> <a href="https://faviosaico.wufoo.com/forms/z2htx5i1l3v583/">Fill out my Wufoo form!</a> </iframe>
+</body>
+</html>

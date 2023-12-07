@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Arquitectura cliente servidor -->
+    <!-- Arquitectura: forma en la que esta estructurado un sistema 
+        Cliente: dispositivo que solicita la pagina web
+        Servidor: Hardware y software que almacena y entrega la pagina web y sus componentes
+    -->
+    <!-- Desarrollo: cuando se escribe el codigo en el server local
+        Produccion: salida al servidor -->
+    
+    <!-- Instalamos la extensión LIVE SERVER, para crear el servidor local
+    127.0.0.1, este se actualiza autometicamente, al guardar los cambios en el codigo
+    La direccion que aparece en el navegador ya no es la de file//C://User.. sino que sera el 
+    server local 127.0.0.1 -->
+    <h1>Hola mundo</h1>
+
+    <!-- ENLACES
+        se crean con a (anchor, ancla) y necesitan el atributo obligatorio href(destino) 
+        _blank: abre en una nueva pestaña
+        nofollow: hace que el link no sume al ceo
+        noreference: no indica al destino el origen del link - no te dice si el enlace viene de tal pagina
+        noopener: evita inscrustación de codigo malicioso al abrir enlaces en nuevas pequeñas
+        dowload: descarga el recurso en lugar de abrirlo en el navegador, la imagen debe estar en el proyecto y estar en modo servidor
+    -->
+    <!-- coloco p para que salte de linea, por que es en bloque -->
+    <p>
+        <a href="https://www.youtube.com/">Youtube</a>
+    </p>
+    <p>
+        <a href="https://www.youtube.com/" target="_blank" rel="nofollow" >Youtube en pestaña nueva</a>   
+    </p>
+
+    <!-- dowload -->
+    <p>
+        <a href="alucar.gif">ver Imagen de Alucard</a>
+    </p>
+    <p>
+        <a href="alucar.gif" download>descargar Imagen de Alucard</a>
+    </p>
+
+
+    <!-- RUTAS RELATIVAS Y ABSOLUTAS
+        1. rutas absolutas: tienen el protocolo https y son unicas(te llevan a un solo lugar), usadas para lugares fuera del pryecto(externo)
+        2. rutas relativas: se usan para rutas internas del proyecto, no usan protocolo 
+            si el recurso esta en la misma carpeta, se escribe nombre.extensión
+            si esta en una carpeta por encima: ../nombre.extension
+            si esta en una carpeta por debajo: carpeta/nombre.extension
+        3. rutas relativas a la raíz: se construyen a partir de la capeta raiz del proyecto, inicia con /
+    
+    -->
+    <p>
+        <a href="imagen/alucar.gif">Alucar</a>
+    </p>
+    <p>
+        <!-- subo un nivel, entro a otra carpeta y selecciono la imagen -->
+        <a href="../prueba/alucar.gif"></a>
+    </p>
+    <p>
+        <!-- relativas a la raíz -->
+        <a href="imagen/prueba.html">Ir a prueba</a>
+    </p>
+
+    <!-- ENLACES DENTRO DE LA MISMA PAGINA -->
+    <p>
+        <a href="/imagen/prueba-enlaces.html">Prueba HTML</a>
+    </p>
+    <!-- Prueba con LISTAS -->
+    <p><a href="/imagen/prueba-listas.html">Ir a las listas</a></p>
+
+</body>
+</html>

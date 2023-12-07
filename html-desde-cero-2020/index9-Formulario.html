@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        div{
+
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Estructura básica -->
+    <!-- 
+        form: marca un formulario
+                action="ruta", al dar click en el boton o input(submit) nos redirige a esa pagina(es un tema de frond y backend)
+        input: caja de texto (son elementos de linea), 
+                type="text" quiere decir que detecta texto de cualquier tipo (String),es el type por defecto
+                placeholder=Contraseña, descripcion de lo que va en ese input, si tiene espacios debe ir entre comillas
+                value: para los type submit es el texto del boton
+                name: forma en la que el servidor identifica que campo es
+                
+        button: boton dentro del formulario
+        textarea: un input mas amplio, como para dejar comentarios o mensajes
+                cols:columnas o ancho
+                rows: filas o altura
+    -->
+    <h1>Inicia sesión</h1>
+    <form action="index8-Tablas.html">
+        <div>
+            <input placeholder="Tu nombre" name="username">
+        </div>
+        <div>
+            <input type="text" placeholder=Contraseña name="password">
+        </div>
+        <div>
+            <textarea name="message" cols="30" rows="10" placeholder="Dejanos un mensaje"></textarea>
+        </div>
+        <!-- <button>Enviar</button> esto no necesariamente para formularios, recomendado para agregar un boton que no sea el de enviar-->
+        <input type="submit" value="Ingresar">  <!-- usarlo para los formularios -->
+    </form>
+
+    <!-- 
+        label: etiqueta, que es mejor que usar placeholder, por que el traductor no lo detecta
+                for: para conectarse al id del input
+        input:
+                id: sirve tanto para css, como para conectarse con el label, si es que id=for.
+                value: pone un valor por default en el input(caja de texto)
+        fieldset: un agrupador de campos, usado para formularios extensos
+                legend: titulo del agrupador        
+    -->
+    <h1>Dejanos tus sugerencias</h1>
+    <form action="index8-Tablas.html" autocomplete="on">
+        <fieldset>
+            <legend>Tus datos personales</legend>
+            <div>
+                <!-- otra forma de vincular un label con un input -->
+                <label>Tu nombre 
+                    <input name="username" value="Favio Saico">
+                </label>
+            </div>
+            <div>
+                <label for="email">Tu correo</label>
+                <input id="email" name="email">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tu mensaje</legend>
+            <div>
+                <label for="message">Dejanos un mensaje</label><br>
+                <textarea id="message" name="message" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tipos de input</legend>
+            <div>
+                <label>Number <!-- para numeros con los cuales vamos hacer calculos, no DNI o telefono,para esos usar el type="text" -->
+                    <input type="number">
+                </label>
+            </div>
+            <div>
+                <label>Date <!-- para fechas -->
+                    <input type="date">
+                </label>
+            </div>
+            <div>
+                <label>Email <!-- para correo, valida que tenga las caracteristicas de un correo, en este caso valida el "@" -->
+                    <input type="email">
+                </label>
+            </div>
+            <div>
+                <label>Tel <!-- para telefonos -->
+                    <input type="tel">
+                </label>
+            </div>
+            <div>
+                <label>Color <!-- para colores -->
+                    <input type="color">
+                </label>
+            </div>
+            <div>
+                <label>password <!-- para contraseñas, cambia las letras por puntos  -->
+                    <input type="password">
+                </label>
+            </div>
+            <div>
+                <label>Range <!-- para rangos, para una app para subir el volumen, etc. -->
+                    <!-- min: valor minimos, max: valor maximos, step:  -->
+                    <input type="range" min="0" max="10" step="2" value="0">
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Selecciona tu afición(checkbox)</legend>
+            <div>
+                <label> <!-- para seleccion multiple -->
+                    <input type="checkbox" name="aficiones" value="Checkbox">
+                    Checkbox
+                </label> 
+            </div>
+            <div>
+                <!-- label es un elemento en linea, por lo que se acodan en la misma fila -->
+                <label>
+                    <input checked type="checkbox" name="aficiones" value="musica">
+                    Musica
+                </label>
+                <label>
+                    <input checked type="checkbox" name="aficiones" value="comida">
+                    Comer
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo(Radio button)</legend> <!-- para seleccion unica -->
+            <div>
+                <!-- Cuando tengan el mismo name permitira que solo uno de eso se seleccione -->
+                <label>
+                    <input type="radio" name="gender">
+                    Hombre
+                </label>
+                <label>
+                    <input type="radio" name="gender">
+                    Mujer
+                </label>
+                <label>
+                    <input checked type="radio" name="gender">
+                    N/A
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Selecciona tu país (Select)</legend> <!-- para seleccion mediante una lista desplegable -->
+            <select name="country" id=""> 
+                <optgroup label="Sudamérica"><!-- para agrupar los elementos a seleccionar, solo usado en caso de ser necesario -->
+                    <option value="pe">Perú</option>
+                    <option value="co" selected >Colombia</option>
+                    <option value="bo">Bolivia</option>
+                </optgroup>
+                <optgroup label="Norteamérica">
+                    <option value="mx">Mexico</option>
+                    <option value="eu">Estado Unidos</option>
+                </optgroup>
+                <option value="pe">Perú</option>
+                <option value="co">Colombia</option>
+                <option value="bo">Bolivia</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <input type="list" list="country-list" required> <!-- list=id para que se puedan conectar -->
+            <!-- funciona igual que select, pero este hace un filtro cuando escribe en el input, aunque no esta soportado del todo en firefox -->
+            <datalist id="country-list">
+                <option value="Peru"></option>
+                <option value="Colombia"></option>
+                <option value="Argentina"></option>
+                <option value="Brasil"></option>
+                <option value="Bolivia"></option>
+                <option value="Chile"></option>
+            </datalist>
+        </fieldset>
+        <input type="text" value="adakjgf" readonly>
+        <!-- <button>Enviar</button> -->
+        <input type="submit" value="Ingresar">
+    </form>
+
+    <!-- Atributos en los formularios
+        PARA LOS INPUTS
+        type: indica el tipo de input que estoy usando
+        placeholder: mejor usar el label
+        required: no require un valor, al colocarlo hace que esa celda sea oblibatoria
+        readonly: hace que el campo sea de solo lectura y no sea modificado por el usuario
+        autocomplete = "on"|"off" (etiqueta en form), si el navegador tiene valores almacenados, autocompleta el formulario
+        checked: hace que el checkbox o Radio button este seleccionado por default
+        selected: hace que la option aparesca por defecto en el select
+    -->
+
+</body>
+</html>

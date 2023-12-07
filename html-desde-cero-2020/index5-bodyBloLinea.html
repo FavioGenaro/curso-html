@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de HTML</title>
+    <style>
+        div{
+            color: red;
+        }
+        span{
+            color: green;
+        }
+        code{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- ELEMENTOS DE BLOQUE -->
+    <!-- Dado que uno esta debajo de otro son elementos de bloque ya que ocupan todo el espacio a su lado -->
+    <h1>Hola mundo</h1>
+    <h2>Hola EDteam</h2>
+
+    <!-- hr -  es un separador de tema, sobretodo si cambio con un tema totalmente distinto -->
+    <p>Bienvenidos a mi pagina web</p>
+    <hr>
+    <h2>Notocias de la semana</h2>
+
+    <!-- pre - preformat o preformatiado, muestra el contenido tal y como lo pones, le importa el salto de linea -->
+    <!-- Puede ser usado para poner codigo -->
+    <pre>
+Me gusta cuando callas
+        por que estas como ausente
+        parece que los ojos te saltan
+    </pre>
+    <!-- code - identificador de código -->
+    <code>
+        <pre>
+        h1{
+            color:red;
+        }
+        </pre>
+    </code>
+
+    <!-- blockquote o bloque de cita - cita un fragmento de un libro, etc; le coloca sangria -->
+    <p>El libro 100 años de soledad de Grabiel Garcia comienza asi: </p>
+    <blockquote>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae veniam laborum, vitae ducimus neque repellendus vero a tempora mollitia eveniet quidem quo aperiam soluta? Voluptates explicabo sed tenetur commodi nostrum.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt officiis voluptate fugit facere labore dolorem, neque nisi, beatae commodi in laborum temporibus. Similique ad error esse quia velit sequi?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate asperiores nemo doloribus fugiat porro nisi provident ipsa doloremque iure tempora, consequuntur esse quis maxime animi, corrupti a ipsum, quo dolor.
+    </blockquote>
+
+    <!-- div o division - unica etiqueta sin significado, solo es una caja, para ccs y js -->
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum iusto maxime temporibus libero quidem, laboriosam mollitia eum nisi voluptates itaque minus hic, velit obcaecati ullam culpa enim amet, recusandae quia?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima voluptate fuga, facilis eum praesentium aut quae nulla consequatur placeat numquam pariatur ab adipisci accusamus dolor dolorum perspiciatis, sapiente dicta ut?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas consequatur fuga doloremque, commodi mollitia magnam. Consequatur, voluptas neque rerum culpa repudiandae, similique, deleniti qui cupiditate ut est dolores nostrum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quaerat! Commodi nobis alias autem laboriosam eum fuga veritatis saepe natus, sint porro voluptatum qui. Quis nesciunt veritatis ab maiores similique?
+    </div>
+
+
+    <!-- ELEMENTOS DE LÍNEA -->
+    <!-- se colocan uno al lado del otro hasta que el espacio se complete (hasta formar una línea completa) -->
+    <!-- Deben estar dentro de un elemento de bloque -->
+
+    <!-- span, es un contenor de linea, sin significado como div, usada para CSS y JS -->
+    <span>Hola mundo</span>
+    <span>Hola EDteam</span>
+    <span>Hola EDteam</span>
+    <span>Hola mundo</span>
+    <span>Hola EDteam</span>
+    <span>Hola mundo</span>
+    <span>Hola EDteam</span>
+
+    <!-- em (emphasis), este texto es el más importante, lo pondra de forma prederteminada en cursiva -->
+    <p>El libro <em>Cien Años de Soledad</em>es un clásico literario</p>
+
+    <!-- strong , es el texto principal, lo pone en negrita -->
+    <p>El libro <strong>Cien Años de Soledad</strong>es un clásico literario</p>
+
+    <!-- small , es el texto menos importante, lo más pequeño -->
+    <p>El libro <small>Cien Años de Soledad</small>es un clásico literario</p>
+
+
+    <!-- wbr (word breaking rule), corta el texto si ya no alcanza el espacio -->
+    <p>sfnjsgjsgkdfjnbknbvkdfhbkdfhgksjghskjf <wbr> ,nvk,hsdufhskghsdkfhwiuhjkdfgksjhfsdkfskfvnkfghweiualodqwpq</p>
+
+
+    <!-- br (breaking rule)- da un salto de línea -->
+    <p>
+        Lorem ipsum dolor <br> sit amet consectetur adipisicing elit. Tempore quis, corporis aut nihil, facilis est eveniet illo quasi fuga commodi distinctio, velit beatae magni consectetur necessitatibus non nisi placeat a?
+        Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. Explicabo fuga voluptates, nihil placeat autem tempora eligendi sit, nostrum fugit cum soluta esse amet eaque atque hic quaerat distinctio, iste eius?
+        Lorem, ipsum dolor sit amet consectetur <br> adipisicing elit. Aperiam earum recusandae atque ipsa dolorum sunt perspiciatis doloribus? Obcaecati, non repellat. Cupiditate nostrum deserunt ex culpa velit debitis, omnis eos harum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eaque, atque maiores at labore culpa obcaecati facere quidem, nostrum reiciendis qui sint ab aspernatur consequatur accusamus magnam totam ratione et? 
+    </p>
+
+    <!-- Elementos de línea raros (b,u,i) - Dan estilos-->
+    <!-- No usarlo, solo para algunos trucos por que no tienen  significado -->
+
+    <!-- b (bold), i (italic) y u (underline) -->
+    <p>HTML todavia conserva etiquetas antiguas para <b>negrita</b>, <i>cursiva</i> y <u>subrayado</u> </p>
+
+    <!-- sub(Da subindice), sup (Da superindice) -->
+    <p>H<sub>2</sub>0 es el simbolo del agua según la química <sup>1</sup></p>
+
+    <!-- code - indica codigo, cambia el tipo de letra-->
+    <p>Las variables en javascritp ser declaran con <code>let</code></p>
+
+    <!-- time - indica tiempo, usado para indicar la hora normalmente en eventos de tu sitio web -->
+    <p>La reunión es a las <time>5pm</time></p>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+
+    <style>
+        table{
+            border-collapse: collapse; /* para que no se generen espacios entre las celdas */
+        } 
+        td, th{ 
+            border: 1px solid rgb(0, 0, 0); /* borde de 1px solido(linea recta) */
+            padding: .5em; /* espacio interior (para que las letras no estan pegadas al cuadro de la tabla) */
+        }
+        th{
+            background: #333;
+            color: white;
+        }
+        caption{
+            padding-bottom: .5em;
+        }
+
+        .col-1{ /*de la tercera tabla*/
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- TABLAS
+        table: marca la tabla
+        tr: Table row, crea una fila
+        th: Table head, Indica que esas celdas son cabeceras
+        td: Table data, para las celdas (no existen las columnas como tal, solo filas y celdas)
+        tfoot: indica el pie de la tabal
+        caption: es el titulo de la tabla
+    -->
+    <table>
+        <thead> <!-- para marcar la cabecera -->
+            <tr> <!-- primera fila -->
+                <th>Lunes</th>  <!-- ctrl + D para ir a la sgte palabra -->
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <!-- No importa si el tfoot lo coloca en medio, el navegador siempre lo mandara al final -->
+        <tfoot><!-- para marcar una conclusión de la tabla, como el total(esto depende de cada tabla por lo que no es obligatorio) -->
+            <tr> <!-- tercera fila -->
+                <td>2 cursos</td>  <!-- presiono la ruedita del mouse -->
+                <td>2 cursos</td> 
+                <td>2 cursos</td>
+                <td>2 cursos</td>
+                <td>2 cursos</td>
+            </tr>
+        </tfoot>
+        <tbody> <!-- para marcar el cuerpo -->
+            <tr> <!-- segunda fila -->
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>JavaScript</td>
+                <td>Photoshop</td>
+                <td>Marketing digital</td>
+            </tr>
+            <tr> <!-- tercera fila -->
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>Java</td>
+                <td>Premiere</td>
+                <td>Marketing digital</td>
+            </tr>
+        </tbody>
+        <!-- No importa si el caption esta al final o en medio, el navegador lo posiciona arriba de la tabla -->
+        <caption>Horario semanal de clases</caption>
+    </table>
+
+    <!-- 
+        Atributos para la agrupacion de filas y columnas
+        colspan=N: hace que la celda abarque N columnas
+        rowspan=N: hace que la celda abarque N filas
+
+        colgroup: puede marcar cada columna de la tabla
+        col: segun la cantidad de col que pongamos, este identifica a ese numero de columna
+        span = N: dentro de col, indica que recorre esas N columnas y en el siguiente col seria la columna N+1
+    -->
+    <!-- TABLA 2 -->
+    <table>
+        <caption>Horario semanal de clases</caption>
+        <colgroup> <!-- recorro las columnas hasta la 6 -->
+            <col span = 5> <!-- recorre 5 columnas -->
+            <col style="background: yellow"> <!-- columna 6, es de color amarrillo -->
+        </colgroup>
+        <thead> <!-- para marcar la cabecera -->
+            <tr> <!-- primera fila -->
+                <th>Lunes</th> 
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sabado</th>
+            </tr>
+        </thead>
+        <tbody> <!-- para marcar el cuerpo -->
+            <tr> <!-- segunda fila -->
+                <td colspan = 2 >HTML</td>
+                <td rowspan = 2 >JavaScript</td>
+                <td colspan = 2 rowspan = 2>Java</td>
+                <td>C#</td>
+            </tr>
+            <tr> <!-- tercera fila -->
+                <td>Go</td>
+                <td>CSS</td>
+                <td>C++</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> <!-- cuarta y ultima fila -->
+                <td colspan = 5>Total de cursos</td>  
+                <td>7 cursos</td> 
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- TABLA 3 -->
+    <table>
+        <caption>Horario semanal de clases</caption>
+        <colgroup>
+            <col class="col-1"> <!-- columna 1 -->
+            <col> <!-- columna 2 -->
+            <col> <!-- columna 3 -->
+            <col style="background: yellow"> <!-- columna 4 -->
+        </colgroup>
+        <thead> <!-- para marcar la cabecera -->
+            <tr> <!-- primera fila -->
+                <th>Lunes</th> 
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sabado</th>
+            </tr>
+        </thead>
+        <tbody> <!-- para marcar el cuerpo -->
+            <tr> <!-- segunda fila -->
+                <td colspan = 2 >HTML</td>
+                <td rowspan = 2 >JavaScript</td>
+                <td colspan = 2 rowspan = 2>Java</td>
+                <td>C#</td>
+            </tr>
+            <tr> <!-- tercera fila -->
+                <td>Go</td>
+                <td>CSS</td>
+                <td>C++</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> <!-- cuarta y ultima fila -->
+                <td colspan = 5>Total de cursos</td>  
+                <td>7 cursos</td> 
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
