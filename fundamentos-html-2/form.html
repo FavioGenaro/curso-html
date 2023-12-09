@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+</head>
+<body>
+    <section>
+        <form action="">
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" placeholder="Nombre" id="name">
+            </div>
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input type="email" placeholder="Correo electrónico" id="email">
+            </div>
+            <!-- fieldset: Permite agrupar varios campos de formulario y darles un contexto mayor -->
+            <fieldset>
+                <legend>Newsletter</legend>
+                <!-- 
+                    name: Es el nombre con el cual vamos a enviar la información
+                    value: Es la información que se enviará
+                -->
+                <label for="html_news">HTML</label>
+                <input type="checkbox" id="html_news" value="html_news" name="news">
+                <label for="css_news">CSS</label>
+                <input type="checkbox" id="css_news" value="css_news" name="news">
+                <label for="js_news">JavaScript</label>
+                <input type="checkbox" id="js_news" value="js_news" name="news">
+            </fieldset>
+            <!-- boton de envío -->
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>

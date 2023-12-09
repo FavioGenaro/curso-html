@@ -1,0 +1,89 @@
+<!-- Define el tipo de html a usar -->
+<!DOCTYPE html>
+<!-- contiene todo el documento -->
+<html lang="en">
+<head>
+    <!-- head encierra las etiqueta meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologías web</title>
+    <!-- Icono en la pestaña de la página, este normalmente no pasa los 32px -->
+    <link rel="icon" href="./icon.png">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <!-- Usamos listas desordenadas -->
+            <!-- Las listas ordenadas las usamos cuando un usuario debe seguir un orden, 
+                por eso en menus no son usadas, porque podemos ir a cualquier lado -->
+            <ul>
+                <!-- en el href debe estar # acompañado por el id de la etiqueta a la que queremos ir -->
+                <li><a href="#frontend">Frontend</a></li>
+                <li><a href="#backend">Backend</a></li>
+                <li><a href="./about-us.html">Acerca de nosotros</a></li>
+                <li><a href="./form.html">Registrate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tecnologías web</h1>
+        <p>Lista de las Tecnologías web más usadas del lado del cliente y del lado del servidor</p>
+        <!-- Establecemos un ancho -->
+        <img src="./web.jpg" alt="Laptop abierta en una página web." width="200px">
+    </main>
+
+    <section id="frontend">
+        <h2>Frontend</h2>
+        <p>Tecnologías del lado del cliente</p>
+        <ol>
+            <!-- li*3 -->
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ol>
+
+        <article>
+            <h3>HTML5</h3>
+            <!-- em para cursiva y strong para negrita -->
+            <p><strong>HTML5</strong> es la <em>quinta revisión</em> importante del lenguaje básico de la World Wide Web, HTML. HTML5 específica dos variantes de sintaxis para HTML: una «clásica», 
+                HTML, y una variante XHTML conocida como sintaxis XHTML5 que deberá servirse con sintaxis XML. 
+                <!-- abbr para indicar abreviatura, el title seria la palabra completa -->
+                Fuente: <abbr title="Mozila Developer Network">MDN</abbr>
+            </p>
+
+            <!-- elemento de lista desplegable, con open se mostrará por defecto(al cargar la pagina) como abierto -->
+            <details open>
+                <summary>Dato importante</summary>
+                <p>Los principios de HTML se le deben a <a href="https://es.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berness-lee</a></p>
+            </details>
+
+            <!-- src: Ruta a la imagen y alt: descripcion de la imagen -->
+            <!-- Añadimos la imagen como link externos, aunque es mejor práctica tener descargado el recurso -->
+            <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="">
+        </article>
+
+        <article>
+            <h3>CSS3</h3>
+            <p>...</p>
+        </article>
+
+    </section>
+    <section id="backend">
+        <h2>Backend</h2>
+        <p>Tecnologías del lado del servidor</p>
+        <ul>
+            <!-- li*3 -->
+            <li>PHP</li>
+            <li>Python</li>
+            <li>MYSQL</li>
+        </ul>
+    </section>
+
+    <footer>
+        <!-- Añadimos un carácter especial -->
+        <p>Todos los derechos reservador &copy; Codigofacilito</p>
+    </footer>
+</body>
+</html>
